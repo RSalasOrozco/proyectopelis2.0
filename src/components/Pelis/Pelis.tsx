@@ -117,11 +117,11 @@ const Pelis: React.FC = () => {
             <p className="mb-2">
               Fecha de lanzamiento: {selectedMovie.release_date}
             </p>
-            <p className="mb-4 ">
+            <p className="mb-4">
               Promedio de votos: {selectedMovie.vote_average.toFixed(1)}
             </p>
             {getTrailerKey(selectedMovie) && (
-              <div className="aspect-w-16 aspect-h-9 mb-4">
+              <div className="aspect-w-16 aspect-h-10 mb-20">
                 <iframe
                   src={`https://www.youtube.com/embed/${getTrailerKey(
                     selectedMovie
@@ -129,7 +129,7 @@ const Pelis: React.FC = () => {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  className="w-100px h-50px rounded-lg"
+                  className="w-25 h-25 rounded-xl"
                 ></iframe>
               </div>
             )}
