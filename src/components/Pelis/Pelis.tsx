@@ -83,7 +83,7 @@ const Pelis: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto pt-8 pb-8 text-slate-100">
+    <div className="container mx-auto pt-8 pb-8 text-slate-100 bg-slate-950">
       <h1 className="text-3xl font-bold my-4">Películas Populares</h1>
 
       <form onSubmit={handleSearch} className="mb-4">

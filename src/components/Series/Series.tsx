@@ -100,7 +100,7 @@ const Series: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto pt-8 pb-8 text-slate-100">
+    <div className="container mx-auto pt-8 pb-8 text-slate-100 bg-gray-950">
       <h1 className="text-3xl font-bold my-4">Series Populares</h1>
 
       <form onSubmit={handleSearch} className="mb-4">

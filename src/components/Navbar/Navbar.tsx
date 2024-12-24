@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
                   Inicio
                 </Link>
                 <Link
-                  href="/"
+                  href="/movies"
                   className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Películas
