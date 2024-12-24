@@ -100,18 +100,20 @@ const Series: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto pt-8 pb-8 text-slate-100">
       <h1 className="text-3xl font-bold my-4">Series Populares</h1>
 
-      <form onSubmit={handleSearch} className="mb-4 flex gap-2">
-        <Input
+      <form onSubmit={handleSearch} className="mb-4">
+        <input
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Buscar series..."
-          className="flex-grow"
+          className="border p-2 mr-2"
         />
-        <Button type="submit">Buscar</Button>
+        <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+          Buscar
+        </button>
       </form>
 
       {loading && <p>Cargando...</p>}
@@ -175,24 +177,28 @@ const Series: React.FC = () => {
         </div>
       )}
 
-      <div className="flex justify-between mt-8">
-        <Button
+      <div className="mx-auto flex justify-center gap-4 mt-8">
+        <button
           onClick={() => fetchTVShows(page - 1)}
           disabled={page === 1 || loading}
-          variant="outline"
+          className="bg-blue-500 text-white p-2 rounded disabled:bg-gray-300"
         >
           Anterior
-        </Button>
-        <Button onClick={() => fetchTVShows(1)} disabled={loading}>
+        </button>
+        <button
+          onClick={() => fetchTVShows(1)}
+          disabled={loading}
+          className="bg-green-500 text-white p-2 rounded"
+        >
           Inicio
-        </Button>
-        <Button
+        </button>
+        <button
           onClick={() => fetchTVShows(page + 1)}
           disabled={page === totalPages || loading}
-          variant="outline"
+          className="bg-blue-500 text-white p-2 rounded disabled:bg-gray-300"
         >
           Siguiente
-        </Button>
+        </button>
       </div>
     </div>
   );
